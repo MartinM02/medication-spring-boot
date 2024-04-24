@@ -11,7 +11,7 @@ public class HelloController {
 
     @GetMapping("/medication")
     public List<MedicationEntry> greeting() {
-        MedicationEntry entry = new MedicationEntry("Test", "Test", 250, 7);
+        MedicationEntry entry = new MedicationEntry("Ibuprofen", "1", 250, 7);
 
 
         return List.of(entry);
