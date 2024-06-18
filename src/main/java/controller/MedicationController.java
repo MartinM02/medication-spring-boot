@@ -8,7 +8,7 @@ import repository.MedicationEntityRepository;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:5175","https://medication-frontend.onrender.com"})
+@CrossOrigin(origins = {"http://localhost:5175","https://medication-frontend.onrender.com","http://localhost:5176" })
 @RequestMapping("/api/medication")
 public class MedicationController {
 
@@ -25,7 +25,7 @@ public class MedicationController {
 
     @PostMapping
     public MedicationEntry addMedication(@RequestBody MedicationEntry medication) {
-        System.out.println(medication.getName());
+        System.out.println(medication.getName() + " " + medication.getQuantity() + " " + medication.getDose() + " " + medication.getPeriod());
         return medicationEntityRepository.save(medication);
     }
 }
