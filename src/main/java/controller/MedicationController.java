@@ -8,7 +8,7 @@ import repository.MedicationEntityRepository;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:5173","https://medication-frontend.onrender.com"})
+@CrossOrigin(origins = {"http://localhost:5175","https://medication-frontend.onrender.com"})
 @RequestMapping("/api/medication")
 public class MedicationController {
 
