@@ -11,10 +11,11 @@ public class HelloController {
 
     @GetMapping("/medication")
     public List<MedicationEntry> greeting() {
-        MedicationEntry entry = new MedicationEntry("Ibuprofen", "1", 250, 7);
+        MedicationEntry entry = new MedicationEntry("Ibuprofen", "1 per day", 250, 7);
+        MedicationEntry entry1 = new MedicationEntry("Paracetamol", "2 per day ", 500, 3);
 
 
-        return List.of(entry);
+        return List.of(entry, entry1);
     }
 
 }
