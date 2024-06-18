@@ -25,6 +25,7 @@ public class MedicationController {
 
     @PostMapping
     public MedicationEntry addMedication(@RequestBody MedicationEntry medication) {
+        System.out.println(medication.getName());
         return medicationEntityRepository.save(medication);
     }
 }
