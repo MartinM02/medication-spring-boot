@@ -1,9 +1,8 @@
-package controller;
+package de.htwberlin.webtech.controller;
 
 import de.htwberlin.webtech.MedicationEntry;
-import repository.MedicationEntityRepository;
 import org.springframework.web.bind.annotation.*;
-import repository.MedicationEntityRepository;
+import de.htwberlin.webtech.repository.MedicationEntityRepository;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package repository;
+package de.htwberlin.webtech.repository;
 
 import de.htwberlin.webtech.MedicationEntry;
 import org.springframework.data.jpa.repository.JpaRepository;
