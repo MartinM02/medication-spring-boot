@@ -25,4 +25,10 @@ public class MedicationController {
     public MedicationEntry addMedication(@RequestBody MedicationEntry medication) {
         return medicationEntityRepository.save(medication);
     }
+
+    @CrossOrigin
+    @DeleteMapping("/{id}")
+    public void deleteMedication(@PathVariable Long id) {
+        medicationEntityRepository.deleteById(id);
+    }
 }
