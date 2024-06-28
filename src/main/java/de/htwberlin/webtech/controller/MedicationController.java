@@ -27,7 +27,7 @@ public class MedicationController {
     }
 
     @CrossOrigin
-    @DeleteMapping("/{id}")
+    @DeleteMapping
     public void deleteMedication(@PathVariable Long id) {
         medicationEntityRepository.deleteById(id);
     }
