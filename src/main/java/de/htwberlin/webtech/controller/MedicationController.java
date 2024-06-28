@@ -15,11 +15,14 @@ public class MedicationController {
     public MedicationController(MedicationEntityRepository medicationRepository) {
         this.medicationEntityRepository = medicationRepository;
     }
+
     @CrossOrigin
     @GetMapping
     public List<MedicationEntry> getAllMedications() {
+        System.out.println(medicationEntityRepository.findAll());
         return medicationEntityRepository.findAll();
     }
+
     @CrossOrigin
     @PostMapping
     public MedicationEntry addMedication(@RequestBody MedicationEntry medication) {

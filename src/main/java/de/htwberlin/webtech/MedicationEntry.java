@@ -1,7 +1,13 @@
 package de.htwberlin.webtech;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "medicationentry")
 public class MedicationEntry {
@@ -22,21 +28,5 @@ public class MedicationEntry {
         this.quantity = quantity;
         this.dose = dose;
         this.period = period;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public int getDose() {
-        return dose;
-    }
-
-    public int getPeriod() {
-        return period;
     }
 }
