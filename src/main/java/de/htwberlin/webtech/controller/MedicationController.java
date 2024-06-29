@@ -34,4 +34,22 @@ public class MedicationController {
     public void deleteMedication(@PathVariable Long id) {
         medicationEntityRepository.deleteById(id);
     }
+
+    @CrossOrigin
+    @PutMapping("/{id}")
+    public MedicationEntry updateMedication(@PathVariable Long id, @RequestBody MedicationEntry updatedMedication) {
+        return medicationEntityRepository.findById(id)
+                .map(medication -> {
+                    medication.setName(updatedMedication.getName());
+                    medication.setQuantity(updatedMedication.getQuantity());
+                    medication.setDose(updatedMedication.getDose());
+                    medication.setPeriod(updatedMedication.getPeriod());
+                    return medicationEntityRepository.save(medication);
+                })
+                .orElseGet(() -> {
+                    updatedMedication.setId(id);
+                    return medicationEntityRepository.save(updatedMedication);
+                });
+    }
+
 }
