@@ -1,6 +1,7 @@
 package de.htwberlin.webtech.controller;
 
 import de.htwberlin.webtech.MedicationEntry;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import de.htwberlin.webtech.repository.MedicationEntityRepository;
 
