@@ -18,12 +18,12 @@ public class MedicationEntry {
     private String name;
     private String quantity;
     private int dose;
-    private String period;
+    private int period;
 
     public MedicationEntry() {
     }
 
-    public MedicationEntry(String name, String quantity, int dose, String period) {
+    public MedicationEntry(String name, String quantity, int dose, int period) {
         this.name = name;
         this.quantity = quantity;
         this.dose = dose;
